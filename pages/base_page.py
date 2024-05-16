@@ -29,7 +29,7 @@ class BasePage:
         return len(self.element_are_visible(locator))
 
     def click_to_element(self, locator):
-        self.element_is_visible(*locator).click()
+        self.element_is_visible(locator).click()
 
     def element_is_clickable(self, locator, timeout=timeout):
         return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))
